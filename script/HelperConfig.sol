@@ -13,7 +13,7 @@ import {MockMTRG} from "../src/test/MockMTRG.sol";
 // TargetDrivenSave - 0x5490194Dff63994Ad35AF72a849049A2445AF7C1
 
 contract HelperConfig is Script {
-    uint256 constant DEFAULT_FEE_TESTNET = 20;
+    uint256 constant DEFAULT_FEE_TESTNET = 10;
     uint256 constant DEFAULT_FEE_MAINNET = 10;
 
     address MTRG_TESTNET = 0x8A419Ef4941355476cf04933E90Bf3bbF2F73814;
