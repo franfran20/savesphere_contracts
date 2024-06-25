@@ -5,12 +5,10 @@ pragma solidity 0.8.21;
 import {Script} from "forge-std/Script.sol";
 import {MockMTRG} from "../src/test/MockMTRG.sol";
 
-// Currently Deployed
-
 // Testnet
 // FlexSave -  0x9FAA0978666B45bACD623E1abD24EbC456bD018b
 // GroupSave - 0xca19D52603977Aff02E3dF9d6844ABDED270dDf4
-// TargetDrivenSave - 0x5490194Dff63994Ad35AF72a849049A2445AF7C1
+// TargetDrivenSave - 0x36f7c8875836f3C18d188Cb6AE7cFe253218EcA6
 
 contract HelperConfig is Script {
     uint256 constant DEFAULT_FEE_TESTNET = 10;

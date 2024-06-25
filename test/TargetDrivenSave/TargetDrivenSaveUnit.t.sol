@@ -118,6 +118,15 @@ contract GroupSaveUnitTest is TargetDrivenSaveBase {
         vm.stopPrank();
     }
 
+    function testCreateTargetDrivenSave__Reverts__IfTheTargetAmountLessThanOrEqualToStartAmount() public {
+        _approveMTRG(USER_ONE, SAVE_START_AMOUNT);
+
+        vm.startPrank(USER_ONE);
+        vm.expectRevert(TargetDrivenSave.TargetDrivenSave__TargetAmountMustBeGreaterThanStartAmount.selector);
+        targetDrivenSave.createTargetDrivenSave({_reason: REASON, _amount: 4e18, _targetAmount: 3e18, _time: SAVE_TIME});
+        vm.stopPrank();
+    }
+
     function testCreateTargetDrivenSave__Reverts__IfNoSaveConditionIsSet() public {
         _approveMTRG(USER_ONE, SAVE_START_AMOUNT);
 

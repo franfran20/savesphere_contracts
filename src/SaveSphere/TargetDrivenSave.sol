@@ -22,6 +22,7 @@ contract TargetDrivenSave is ReentrancyGuard {
     error TargetDrivenSave__SaveAlreadyUnlocked();
     error TargetDrivenSave__AmountCannnotBeZero();
     error TargetDrivenSave__TopUpMustIncludeTimeOrAmount();
+    error TargetDrivenSave__TargetAmountMustBeGreaterThanStartAmount();
 
     // EVENTS
 
@@ -98,6 +99,12 @@ contract TargetDrivenSave is ReentrancyGuard {
     {
         if (_targetAmount == 0 && _time == 0) {
             revert TargetDrivenSave__AtLeastOneConditionMustBeSet();
+        }
+
+        if ((_time > 0 && _targetAmount > 0) || (_time == 0 && _targetAmount > 0)) {
+            if (_targetAmount <= _amount) {
+                revert TargetDrivenSave__TargetAmountMustBeGreaterThanStartAmount();
+            }
         }
 
         SafeERC20.safeTransferFrom(MTRG, msg.sender, address(this), _amount);
