@@ -67,7 +67,10 @@ Once users achieve their savings goal, they gain the ability to withdraw their t
 
 ### Testnet
 
+- Link to live demo [here](https://savesphere-ggvbknpk1-franfran20s-projects.vercel.app)
+- Link to video demo [here]()
 - FlexSave - [0x9FAA0978666B45bACD623E1abD24EbC456bD018b](https://scan-warringstakes.meter.io/address/0x9faa0978666b45bacd623e1abd24ebc456bd018b)
 - GroupSave - [0xca19D52603977Aff02E3dF9d6844ABDED270dDf4](https://scan-warringstakes.meter.io/address/0xca19D52603977Aff02E3dF9d6844ABDED270dDf4)
 - TargetDrivenSave - [0x36f7c8875836f3C18d188Cb6AE7cFe253218EcA6](https://scan-warringstakes.meter.io/address/0x36f7c8875836f3C18d188Cb6AE7cFe253218EcA6)
+
 <!--  old target driven ->  0x5490194Dff63994Ad35AF72a849049A2445AF7C1>
